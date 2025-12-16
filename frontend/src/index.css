@@ -3,3 +3,7 @@
 *{
   font-family: "Inter", sans-serif;
 }
+@theme{
+  --color-primary : #34e301;
+  --color-primary-dull :#232622;
+}
