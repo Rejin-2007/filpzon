@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 
 const MainBanner = () => {
     return (
-        <div className='relative '>
-            <img src={assets.main_banner_bg} alt="Main Banner" className='w-full hidden md:block' />
-            <img src={assets.main_banner_bg_sm} alt="Main Banner" className='w-full hidden md:hidden' />
-            <div>
-                <h1>Freshness You Can , Saving You Will Love!</h1>
-            </div>
-            <div className='flex flex-col '>
-                <Link to="/products" className='p-4 mx-2  w-36 rounded-xl bg-primary/20 h-auto border border-black '>{"Shop Now -->"}</Link>
-                <Link to="/products" className='p-4 mx-2 w-36 rounded-xl bg-primary/20 h-auto border border-black '>{"Explore -->"}</Link>
+        <div className="relative">
+            <img src={assets.main_banner_bg} alt="Main Banner" className="w-full hidden md:block" />
+            <img src={assets.main_banner_bg_sm} alt="Main Banner" className="w-full md:hidden" />
+            <div className="absolute inset-0 flex flex-col items-center md:items-start justify-end md:justify-center pb-24 md:pb-0 px-4 md:pl-16 lg:pl-24">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left max-w-72 md:max-w-80 lg:max-w-90 leading-tight"> Freshness You Can Trust, Savings You’ll Love!</h1>
+                <div className="flex items-center mt-6 font-medium">
+                    <Link to="/products" className="group flex items-center gap-2 px-7 md:px-9 py-3 bg-primary transition rounded text-white hover:bg-primary/50">Shop Now →</Link>
+                    <Link to="/products" className="group hidden md:flex items-center gap-2 px-9 py-3">Explore →</Link>
+                </div>
             </div>
         </div>
     )
